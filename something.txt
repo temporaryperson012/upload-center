@@ -10,3 +10,76 @@ https://github.com/nikita9604/Automated-Voice-Controlled-Email-Sender
 https://file.pizza/download/squid/leeks/walnuts/squash
 
 https://file.pizza/download/m5s3yueu
+
+
+
+
+the detailed prompt to generate the app
+
+
+Build a full-stack web application called “Intern Management & IT Mentorship Tool” with the following requirements:
+
+1. General
+Use a modern, beautiful, and professional UI theme (preferably with Tailwind CSS or Material UI).
+The app must be fully responsive and mobile-friendly.
+Include a visually appealing landing page with a project overview, features, and a call-to-action for login/signup.
+All pages should have consistent navigation and branding.
+2. Tech Stack
+Frontend: React (with Vite), Tailwind CSS, React Router DOM, React Hook Form, Recharts, Heroicons, React Hot Toast.
+Backend: Supabase (Postgres) for authentication and data storage.
+Other: Use best practices for state management (React Context or Redux if needed).
+3. Authentication & Roles
+Email/password authentication using Supabase Auth.
+Role-based access: “mentor” and “intern”.
+On signup, user selects their role; store user profile in a users table with role and metadata.
+Secure protected routes based on user role.
+4. Mentor Features
+Intern Management: Add, view, and remove interns.
+Task Assignment: Create and assign tasks to interns.
+Progress Monitoring: Track task completion and progress updates.
+Dashboard: Overview of all interns and their performance.
+Reports & Analytics: Visual charts and performance metrics (use Recharts).
+Data Export: Export task and progress data to CSV.
+5. Intern Features
+Task Management: View assigned tasks with priorities and due dates.
+Progress Updates: Submit detailed progress reports with notes and blockers.
+Personal Dashboard: Overview of task completion and timeline.
+Timeline View: Track internship duration and milestones.
+Performance Tracking: Visual progress charts and statistics.
+6. Analytics & Reporting
+Task status distribution charts.
+Intern performance metrics.
+Progress tracking over time.
+Exportable reports (CSV format).
+Real-time dashboard updates.
+7. UI/UX
+Use Tailwind CSS utility classes for styling.
+All forms must have validation and user-friendly error messages.
+Use React Hot Toast for notifications (success, error, info).
+Use Heroicons for icons.
+All tables and lists should be paginated and searchable if data is large.
+Include loading spinners and skeletons for async data.
+8. Project Structure
+Organize components by domain: auth, mentor, intern, layout, etc.
+Use a centralized Auth context (src/contexts/SupabaseAuthContext.jsx).
+Store Supabase client in src/supabaseClient.js.
+Use protected route components for role-based access.
+9. Landing Page
+A beautiful, modern landing page at / with:
+Project name and logo.
+Brief description and feature highlights.
+“Get Started” button leading to login/signup.
+Screenshots or illustrations (use SVGs or placeholder images).
+Footer with contact and links.
+10. Error Handling & Robustness
+All async operations must have try/catch and display user-friendly error messages.
+Handle loading and empty states gracefully.
+Validate all user input on both client and server side.
+11. Deployment
+The app should run on Vite’s dev server (npm run dev) and be ready for deployment on Vercel, Netlify, or Firebase Hosting.
+Include a README.md with setup, usage, and deployment instructions.
+12. Example Data Schema
+users: id, email, name, role, createdAt, department/experience (mentor), university/startDate/endDate/mentorId (intern)
+tasks: id, title, description, mentorId, assignedTo, status, priority, dueDate, createdAt, updatedAt
+updates: id, taskId, notes, blockers, progress, submittedAt, submittedBy
+Deliver a complete, error-free codebase with all the above features, best practices, and a beautiful, modern UI.
